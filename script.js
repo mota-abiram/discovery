@@ -44,35 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1500);
     });
 
-    // Intersection Observer for fade-in effects on load
-    const observerOptions = {
-        threshold: 0.1
+    // Intersection Observer for Reveal on Scroll
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
+                // Optional: Stop observing after it's revealed for performance
+                // revealObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, revealOptions);
 
-    document.querySelectorAll('.hero-content, .hero-video-wrapper').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
-        observer.observe(el);
-    });
+    // Observe all elements with 'reveal' class
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => revealObserver.observe(el));
 
-    // Update visibility via class
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.querySelectorAll('.hero-content, .hero-video-wrapper').forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        }, 100);
-    });
 
     // Sticky Button Scroll to Form
     const stickyBtn = document.querySelector('.sticky-enquire-btn');
