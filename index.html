@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Project Audit | Inventory Solutions</title>
+    <meta name="description"
+        content="Discover why your sales are blocked. Get a free project audit of your inventory, competitors, and funnel.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="assets/dm-logo.png" alt="Digital Mojo" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Video Container -->
+                    <div class="hero-video-wrapper">
+                        <div class="video-container" id="parallax-video">
+                            <video autoplay loop playsinline class="hero-video">
+                                <source src="/assets/dhiraj.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay"></div>
+                        </div>
+                    </div>
+
+                    <!-- Content & Form Container -->
+                    <div class="hero-content">
+                        <div class="header-group">
+                            <h1 class="headline">Struggling to Move Inventory Despite Spending on Digital?</h1>
+                            <p class="subheadline">We audit your project, competitors, and funnel to show exactly where
+                                sales are getting blocked — and what to fix.</p>
+                        </div>
+
+                        <div class="form-card">
+                            <p class="cta-microcopy">Free Project Audit | No Sales Pitch</p>
+                            <form id="audit-form" class="audit-form">
+                                <div class="form-scroll-area">
+                                    <!-- 1. Full Name -->
+                                    <div class="input-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Enter your full name"
+                                            required>
+                                    </div>
+
+                                    <!-- 2. Mobile Number -->
+                                    <div class="input-group">
+                                        <label for="phone">Mobile Number (WhatsApp preferred)</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000"
+                                            required>
+                                    </div>
+
+                                    <!-- 3. Project Details -->
+                                    <div class="input-group">
+                                        <label for="project">Project Name + Location / Website</label>
+                                        <input type="text" id="project" name="project"
+                                            placeholder="e.g. Green Meadows, Hyderabad / www.greenmeadows.com" required>
+                                        <small class="hint">Location is mandatory, website is optional</small>
+                                    </div>
+
+                                    <!-- 4. Project Type -->
+                                    <div class="input-group">
+                                        <label for="project-type">Project Type</label>
+                                        <select id="project-type" name="project-type" required>
+                                            <option value="" disabled selected>Select Project Type</option>
+                                            <option value="apartment">Apartment</option>
+                                            <option value="villa">Villa</option>
+                                            <option value="open-plot">Open Plot</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 5. Inventory -->
+                                    <div class="input-group">
+                                        <label for="inventory">Inventory You Want to Sell</label>
+                                        <select id="inventory" name="inventory" required>
+                                            <option value="" disabled selected>Select Units</option>
+                                            <option value="under-40">Less than 40 units</option>
+                                            <option value="40-100">40–100 units</option>
+                                            <option value="100plus">100+ units</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 6. Ticket Size -->
+                                    <div class="input-group">
+                                        <label for="ticket-size">Average Ticket Size</label>
+                                        <select id="ticket-size" name="ticket-size" required>
+                                            <option value="" disabled selected>Select Price Range</option>
+                                            <option value="below-75L">Below ₹75L</option>
+                                            <option value="75L-1.2Cr">₹75L – ₹1.2 Cr</option>
+                                            <option value="1.2-2Cr">₹1.2 – ₹2 Cr</option>
+                                            <option value="2-4Cr">₹2 – ₹4 Cr</option>
+                                            <option value="4Cr-plus">₹4 Cr+</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 7. Ad Budget -->
+                                    <div class="input-group">
+                                        <label for="ad-budget">Monthly Digital Ad Budget</label>
+                                        <select id="ad-budget" name="ad-budget" required>
+                                            <option value="" disabled selected>Select Budget Range</option>
+                                            <option value="below-5L">Less than ₹5L</option>
+                                            <option value="5-10L">₹5–10L</option>
+                                            <option value="10-25L">₹10–25L</option>
+                                            <option value="25L-plus">₹25L+</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 8. Decision Maker -->
+                                    <div class="input-group">
+                                        <label>Are you the decision-maker for this project?</label>
+                                        <div class="radio-group">
+                                            <label class="radio-label">
+                                                <input type="radio" name="decision-maker" value="yes" required>
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="decision-maker" value="no">
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="cta-button">
+                                    Submit now
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Happens Next</h2>
+                    <p class="section-subtitle">A calm, structured approach to identifying your sales roadblocks.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Deep Review</h3>
+                            <p>We review your project details, location, and previous digital efforts with careful
+                                attention to detail.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Competitor Study</h3>
+                            <p>We study your immediate competitors and their digital activity to see how you are
+                                positioned in the market.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Blockage Analysis</h3>
+                            <p>We analyze your current sales funnel to pinpoint exactly where leads are getting lost or
+                                sales are getting blocked.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Consultative Report</h3>
+                            <p>We prepare a short, objective document showing:</p>
+                            <ul class="step-list">
+                                <li>What is not working today</li>
+                                <li>What can be improved immediately</li>
+                                <li>How digital can realistically move inventory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="trust-section">
+            <div class="container">
+                <h2 class="trust-title">Our Clients</h2>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Logos (Group 1) -->
+                    <div class="logo-item"><img src="assets/OMSREE-LOGO-WEB.png" alt="Om Sree"></div>
+                    <div class="logo-item"><img src="assets/Brand-1.png" alt="Brand 1"></div>
+                    <div class="logo-item"><img src="assets/Brand-2.png" alt="Brand 2"></div>
+                    <div class="logo-item"><img src="assets/logo-3-1.png" alt="Logo 3"></div>
+                    <div class="logo-item"><img src="assets/uraban.png" alt="Urban"></div>
+                    <div class="logo-item"><img src="assets/New-Project-9.png" alt="Project 9"></div>
+                    <div class="logo-item"><img src="assets/New-Project-10.png" alt="Project 10"></div>
+                    <div class="logo-item"><img src="assets/New-Project-11.png" alt="Project 11"></div>
+                    <div class="logo-item"><img src="assets/New-Project-12.png" alt="Project 12"></div>
+                    <div class="logo-item"><img src="assets/main-logo-new-svg.png" alt="Main Logo"></div>
+
+                    <!-- Logos (Group 2 for infinite effect) -->
+                    <div class="logo-item"><img src="assets/OMSREE-LOGO-WEB.png" alt="Om Sree"></div>
+                    <div class="logo-item"><img src="assets/Brand-1.png" alt="Brand 1"></div>
+                    <div class="logo-item"><img src="assets/Brand-2.png" alt="Brand 2"></div>
+                    <div class="logo-item"><img src="assets/logo-3-1.png" alt="Logo 3"></div>
+                    <div class="logo-item"><img src="assets/uraban.png" alt="Urban"></div>
+                    <div class="logo-item"><img src="assets/New-Project-9.png" alt="Project 9"></div>
+                    <div class="logo-item"><img src="assets/New-Project-10.png" alt="Project 10"></div>
+                    <div class="logo-item"><img src="assets/New-Project-11.png" alt="Project 11"></div>
+                    <div class="logo-item"><img src="assets/New-Project-12.png" alt="Project 12"></div>
+                    <div class="logo-item"><img src="assets/main-logo-new-svg.png" alt="Main Logo"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Developers Say After Working With Us</h2>
+                    <p class="section-subtitle">Real feedback from real estate partners moving inventory effectively.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="video-thumbnail-wrapper">
+                            <video class="testimonial-video"
+                                poster="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+                                loading="lazy">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-keyboard-and-a-cup-of-coffee-4122-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div class="play-overlay">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Arjun Reddy</h3>
+                            <p class="location">Managing Director, ABC Infra</p>
+                            <p class="credibility">Moved 45+ units in 3 months after the audit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="video-thumbnail-wrapper">
+                            <video class="testimonial-video"
+                                poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                                loading="lazy">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-business-people-shaking-hands-in-an-office-4318-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div class="play-overlay">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Siddharth Verma</h3>
+                            <p class="location">Founder, Verve Homes</p>
+                            <p class="credibility">Competitor study completely changed or strategy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Address Section / Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Left Column: Branding -->
+                    <div class="footer-brand-col">
+                        <img src="assets/Digital-Mojo-Logo.png" alt="Digital Mojo Logo" class="footer-logo">
+                        <div class="social-links">
+                            <a href="#">Fb.</a>
+                            <span>/</span>
+                            <a href="#">Lk.</a>
+                            <span>/</span>
+                            <a href="#">Ig.</a>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column: Address -->
+                    <div class="footer-info-col">
+                        <h3 class="col-title">Address</h3>
+                        <div class="address-content">
+                            <p class="agency-name">Digital Mojo - Branding and Digital Marketing Agency in Hyderabad</p>
+                            <p>B2, Midas Square, Plot No 34A, Lane Number 12, near Lotus Pond Road, Phase 2, MLA Colony,
+                                Banjara Hills, Hyderabad, Telangana 500034</p>
+                        </div>
+
+                        <!-- Map Container -->
+                        <div class="footer-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.135759795697!2d78.4312!3d17.4104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI0JzM3LjQiTiA3OMKwMjUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1678530000000!5m2!1sen!2sin"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Work Inquiries -->
+                    <div class="footer-info-col">
+                        <h3 class="col-title">Work inquiries</h3>
+                        <p>Interested in working with us?</p>
+                        <p class="contact-link"><strong>dhiraj@digitalmojo.in</strong></p>
+                        <p class="contact-link"><strong>099083 98763</strong></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Digital Mojo. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div class="floating-contact-controls">
+        <a href="tel:+910000000000" class="contact-fab call-fab" aria-label="Call Us">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.02A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+            </svg>
+        </a>
+        <a href="https://wa.me/910000000000" class="contact-fab whatsapp-fab" aria-label="WhatsApp Us" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.05c6.505 0 11.888-5.337 11.891-11.894a11.82 11.82 0 00-3.483-8.413z" />
+            </svg>
+        </a>
+    </div>
+
+    <button class="sticky-enquire-btn">ENQUIRE NOW</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
