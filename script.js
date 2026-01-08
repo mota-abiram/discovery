@@ -26,29 +26,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('audit-form');
 
 
-    // Form Submission Animation / Placeholder
+    // Form Submission: Google Sheets Connector
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const button = form.querySelector('.cta-button');
         const originalContent = button.innerHTML;
 
-        button.innerHTML = 'Analyzing...';
+        // REPLACE THIS URL with your Google Apps Script Web App URL
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi-kGexchnvjlpU3_7QX9ewoNPvxZ438WQ9pDqNTP9m8rTsLJhZQtf4Sr2CdMxFFEB_w/exec';
+
+        button.innerHTML = 'Submitting Lead...';
         button.style.opacity = '0.7';
         button.disabled = true;
 
-        // Simulate a delay for premium feel
-        setTimeout(() => {
-            button.innerHTML = 'Check Your Email!';
-            button.style.background = '#10b981'; // Success green
-            button.style.opacity = '1';
+        // Collect Form Data
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => { data[key] = value; });
 
-            setTimeout(() => {
-                button.innerHTML = originalContent;
-                button.style.background = '';
+        // Submit to Google Sheet
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Critical for Google Apps Script
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(() => {
+                // Success State
+                button.innerHTML = 'Lead Secured!';
+                button.style.background = '#10b981';
+                button.style.opacity = '1';
+
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.style.background = '';
+                    button.disabled = false;
+                    form.reset();
+                    // Optional: Redirect to Thank You page
+                    // window.location.href = 'thank-you.html';
+                }, 3000);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                button.innerHTML = 'Error. Try Again';
+                button.style.background = '#ef4444';
                 button.disabled = false;
-                form.reset();
-            }, 3000);
-        }, 1500);
+            });
     });
 
     // Intersection Observer for Reveal on Scroll
