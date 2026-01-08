@@ -1,23 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const videoContainer = document.getElementById('parallax-video');
+    const heroVideo = document.getElementById('hero-main-video');
+    const heroPlayBtn = document.getElementById('hero-play-btn');
+
+    // Hero Video Play/Pause Logic
+    if (heroVideo && heroPlayBtn) {
+        const togglePlay = () => {
+            if (heroVideo.paused) {
+                heroVideo.play();
+                heroPlayBtn.classList.add('hidden');
+            } else {
+                heroVideo.pause();
+                heroPlayBtn.classList.remove('hidden');
+            }
+        };
+
+        heroPlayBtn.addEventListener('click', togglePlay);
+        heroVideo.addEventListener('click', togglePlay);
+
+        // Show button again if video ends
+        heroVideo.addEventListener('ended', () => {
+            heroPlayBtn.classList.remove('hidden');
+        });
+    }
+
     const form = document.getElementById('audit-form');
 
-    // Subtle Vertical Parallax Effect on Scroll
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-
-        // Only apply if on desktop and in view
-        if (window.innerWidth > 1024) {
-            // Calculate a subtle movement (slow vertical parallax)
-            // We adjust the transform to add to the existing floating animation
-            const parallaxVal = scrolled * 0.1;
-
-            // Check if hero is still in view
-            if (scrolled < window.innerHeight) {
-                videoContainer.style.transform = `translateY(${parallaxVal}px)`;
-            }
-        }
-    });
 
     // Form Submission Animation / Placeholder
     form.addEventListener('submit', (e) => {

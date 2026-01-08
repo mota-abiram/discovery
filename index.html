@@ -25,18 +25,23 @@
             <div class="container">
                 <div class="hero-grid">
                     <!-- Video Container -->
-                    <div class="hero-video-wrapper reveal">
+                    <div class="hero-video-wrapper">
                         <div class="video-container" id="parallax-video">
-                            <video autoplay loop playsinline class="hero-video">
+                            <video class="hero-video" id="hero-main-video">
                                 <source src="/assets/dhiraj.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <div class="hero-play-button" id="hero-play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
                             <div class="video-overlay"></div>
                         </div>
                     </div>
 
                     <!-- Content & Form Container -->
-                    <div class="hero-content reveal">
+                    <div class="hero-content">
                         <div class="header-group">
                             <h1 class="headline">Struggling to Move Inventory Despite Spending on Digital?</h1>
                             <p class="subheadline">We audit your project, competitors, and funnel to show exactly where
@@ -362,7 +367,6 @@
         </a>
     </div>
 
-    <button class="sticky-enquire-btn">ENQUIRE NOW</button>
 
     <script src="script.js"></script>
 </body>
