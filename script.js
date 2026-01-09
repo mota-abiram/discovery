@@ -6,8 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroVideo && heroPlayBtn) {
         const togglePlay = () => {
             if (heroVideo.paused) {
-                heroVideo.play();
-                heroPlayBtn.classList.add('hidden');
+                heroVideo.play().then(() => {
+                    heroPlayBtn.classList.add('hidden');
+                }).catch(error => {
+                    console.error("Hero video play failed:", error);
+                    // Fallback: try muted if it wasn't already
+                    heroVideo.muted = true;
+                    heroVideo.play().then(() => heroPlayBtn.classList.add('hidden'));
+                });
             } else {
                 heroVideo.pause();
                 heroPlayBtn.classList.remove('hidden');
@@ -26,25 +32,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Testimonial Video Play/Pause Logic (Using Hero Logic Style)
     const testimonialWrappers = document.querySelectorAll('.video-thumbnail-wrapper');
     testimonialWrappers.forEach(wrapper => {
-        const video = wrapper.querySelector('.testimonial-video');
-        const overlay = wrapper.querySelector('.play-overlay');
+        const testimonialVideo = wrapper.querySelector('.testimonial-video');
+        const testimonialPlayBtn = wrapper.querySelector('.play-overlay');
 
-        if (video && overlay) {
-            const togglePlay = () => {
-                if (video.paused) {
-                    video.play();
-                    overlay.classList.add('hidden');
+        if (testimonialVideo && testimonialPlayBtn) {
+            const togglePlay = (e) => {
+                e.preventDefault();
+                if (testimonialVideo.paused) {
+                    testimonialVideo.play().then(() => {
+                        testimonialPlayBtn.classList.add('hidden');
+                    }).catch(error => {
+                        console.error("Testimonial video play failed:", error);
+                        testimonialVideo.muted = true;
+                        testimonialVideo.play().then(() => testimonialPlayBtn.classList.add('hidden'));
+                    });
                 } else {
-                    video.pause();
-                    overlay.classList.remove('hidden');
+                    testimonialVideo.pause();
+                    testimonialPlayBtn.classList.remove('hidden');
                 }
             };
 
-            overlay.addEventListener('click', togglePlay);
-            video.addEventListener('click', togglePlay);
+            testimonialPlayBtn.addEventListener('click', togglePlay);
+            testimonialVideo.addEventListener('click', togglePlay);
 
-            video.addEventListener('ended', () => {
-                overlay.classList.remove('hidden');
+            // Show button again if video ends
+            testimonialVideo.addEventListener('ended', () => {
+                testimonialPlayBtn.classList.remove('hidden');
             });
         }
     });
