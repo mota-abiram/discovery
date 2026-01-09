@@ -23,6 +23,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Testimonial Video Play/Pause Logic (Using Hero Logic Style)
+    const testimonialWrappers = document.querySelectorAll('.video-thumbnail-wrapper');
+    testimonialWrappers.forEach(wrapper => {
+        const video = wrapper.querySelector('.testimonial-video');
+        const overlay = wrapper.querySelector('.play-overlay');
+
+        if (video && overlay) {
+            const togglePlay = () => {
+                if (video.paused) {
+                    video.play();
+                    overlay.classList.add('hidden');
+                } else {
+                    video.pause();
+                    overlay.classList.remove('hidden');
+                }
+            };
+
+            overlay.addEventListener('click', togglePlay);
+            video.addEventListener('click', togglePlay);
+
+            video.addEventListener('ended', () => {
+                overlay.classList.remove('hidden');
+            });
+        }
+    });
+
     const form = document.getElementById('audit-form');
 
 
