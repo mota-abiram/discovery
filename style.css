@@ -403,6 +403,8 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .testimonial-card:hover {
@@ -411,7 +413,7 @@ body {
 
 .video-thumbnail-wrapper {
     position: relative;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/5;
     background: #000;
     cursor: pointer;
     overflow: hidden;
